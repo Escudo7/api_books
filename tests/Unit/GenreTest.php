@@ -48,8 +48,9 @@ class GenreTest extends TestCase
 
         $expectedJson = array_merge($dataForUpdate, ['id' => $modelGenre->id]);
         $response
-            ->assertStatus(201)
+            ->assertStatus(200)
             ->assertExactJson($expectedJson);
+        $this->assertEquals(1, Genre::where('name', $dataForUpdate['name'])->count());
     }
 
     public function testDelete()

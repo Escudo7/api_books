@@ -96,8 +96,9 @@ class BookTest extends TestCase
 
         $expectedJson = array_merge($dataForUpdate, ['id' => $book->id]);
         $response
-            ->assertStatus(201)
+            ->assertStatus(200)
             ->assertJson($expectedJson);
+        $this->assertEquals(1, Book::where('name', $dataForUpdate['name'])->count());
     }
 
     public function testDelete()

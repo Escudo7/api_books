@@ -37,7 +37,7 @@ class AuthorTest extends TestCase
         $response
             ->assertStatus(201)
             ->assertExactJson($expectedJson);
-        $this->assertEquals(1, Author::where('name', $modelAuthor->first_name)->count());
+        $this->assertEquals(1, Author::where('first_name', $modelAuthor->first_name)->count());
     }
 
     public function testUpdate()
@@ -48,14 +48,15 @@ class AuthorTest extends TestCase
 
         $expectedJson = array_merge($dataForUpdate, ['id' => $modelAuthor->id]);
         $response
-            ->assertStatus(201)
+            ->assertStatus(200)
             ->assertExactJson($expectedJson);
+        $this->assertEquals(1, Author::where('first_name', $dataForUpdate['first_name'])->count());
     }
 
     public function testDelete()
     {
         $modelAuthor = factory(Author::class)->create();
-        $response = $this->deleteJson(route('author.destroy', $modelAuthor));
+        $response = $this->deleteJson(route('authors.destroy', $modelAuthor));
 
         $response
             ->assertStatus(204);
