@@ -14,7 +14,7 @@ class GenreController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function index()
     {
@@ -33,7 +33,7 @@ class GenreController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \App\Http\Requests\Genre\StoreGenre  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function store(StoreGenre $request)
     {
@@ -53,7 +53,7 @@ class GenreController extends Controller
      *
      * @param  \App\Http\Requests\Genre\UpdateGenre  $request
      * @param  \App\Genre  $genre
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function update(UpdateGenre $request, Genre $genre)
     {

@@ -14,7 +14,7 @@ class AuthorController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function index()
     {
@@ -33,7 +33,7 @@ class AuthorController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \App\Http\Requests\Author\StoreAuthor $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function store(StoreAuthor $request)
     {
@@ -53,7 +53,7 @@ class AuthorController extends Controller
      *
      * @param  \App\Http\Requests\Author\UpdateAuthor  $request
      * @param  \App\Author  $author
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function update(UpdateAuthor $request, Author $author)
     {
