@@ -47,7 +47,7 @@
             <div class="ml-5">
                 <p class="h4 hide-sibbling">Получение списка книг</p>
                 <div class="hide pl-3">
-                    <p class="h5">Маршрут: GET /api/books/</p>
+                    <p class="h5">Маршрут: GET /api/books</p>
                     <p>Параметры запроса:</p>
                     <table class="table">
                         <thead class="thead-dark">
@@ -100,7 +100,7 @@
                 </div>
                 <p class="h4 hide-sibbling">Создание новой книги</p>
                 <div class="hide pl-3">
-                    <p class="h5">Маршрут: POST /api/books/</p>
+                    <p class="h5">Маршрут: POST /api/books</p>
                     <p>Парметры запроса:</p>
                     <table class="table">
                         <thead class="thead-dark">
@@ -131,7 +131,7 @@
                             <td>Год публикации. Не может быть больше текущего</td>
                         </tr>
                     </table>
-                    <p>Пример запроса: <code>curl -i -d "year_publication=1895&name=Машина времени&authors[]=7&genres[]=3" -X POST "https://api-book-collection.herokuapp.com/api/books/"
+                    <p>Пример запроса: <code>curl -i -d "year_publication=1895&name=Машина времени&authors[]=7&genres[]=3" -X POST "https://api-book-collection.herokuapp.com/api/books"
                         </code></p>
                     <p>Пример ответа:</p>
                     <pre class="pre-scrollable">
@@ -271,7 +271,7 @@
                 </div>
                 <p class="h4 hide-sibbling">Создание нового автора</p>
                 <div class="hide pl-3">
-                    <p class="h5">Маршрут: POST /api/authors/</p>
+                    <p class="h5">Маршрут: POST /api/authors</p>
                     <p>Парметры запроса:</p>
                     <table class="table">
                         <thead class="thead-dark">
@@ -359,7 +359,7 @@
             <div class="ml-5">
                 <p class="h4 hide-sibbling">Получение списка жанров</p>
                 <div class="hide pl-3">
-                    <p class="h5">Маршрут: GET /api/genres/</p>
+                    <p class="h5">Маршрут: GET /api/genres</p>
                     <p>Параметры запроса:</p>
                     <table class="table">
                         <thead class="thead-dark">
@@ -380,7 +380,7 @@
                             <td>Позволяет пропустить указанное количество единиц данных перед выводом результата запроса. По умолчанию равен 0</td>
                         </tr>
                     </table>
-                    <p>Пример запроса: <code>curl -i -X GET "https://api-book-collection.herokuapp.com/api/genres/?offset=1&limit=2"</code></p>
+                    <p>Пример запроса: <code>curl -i -X GET "https://api-book-collection.herokuapp.com/api/genres?offset=1&limit=2"</code></p>
                     <p>Пример ответа:</p>
                     <pre class="pre-scrollable">
 [
@@ -397,7 +397,7 @@
                 </div>
                 <p class="h4 hide-sibbling">Создание нового жанра</p>
                 <div class="hide pl-3">
-                    <p class="h5">Маршрут: POST /api/genres/</p>
+                    <p class="h5">Маршрут: POST /api/genres</p>
                     <p>Парметры запроса:</p>
                     <table class="table">
                         <thead class="thead-dark">
@@ -413,7 +413,7 @@
                             <td>Название жанра</td>
                         </tr>
                     </table>
-                    <p>Пример запроса: <code>curl -i -d "name=Детектив" -X POST "https://api-book-collection.herokuapp.com/api/genres/"</code></p>
+                    <p>Пример запроса: <code>curl -i -d "name=Детектив" -X POST "https://api-book-collection.herokuapp.com/api/genres"</code></p>
                     <p>Пример ответа:</p>
                     <pre class="pre-scrollable">
 {
