@@ -62,8 +62,8 @@ class BookTest extends TestCase
 
         $data = array_merge(
             $modelBook->toArray(),
-            ['authors_id' => $author->id],
-            ['genres_id' => $genre->id]
+            ['authors' => [$author->id]],
+            ['genres' => [$genre->id]]
         );
         $response = $this->postJson(route('books.store'), $data);
 
@@ -72,7 +72,8 @@ class BookTest extends TestCase
         $expectedJson = array_merge(
             $modelBook->toArray(),
             ['authors' => [$authorCollect->except($this->filteredKeys)->toArray()]],
-            ['genres' => [$genreCollect->except($this->filteredKeys)->toArray()]]
+            ['genres' => [$genreCollect->except($this->filteredKeys)->toArray()]],
+            ['id' => 1]
         );
 
         $response
@@ -94,7 +95,7 @@ class BookTest extends TestCase
         $dataForUpdate = factory(Book::class)->make()->toArray();
         $response = $this->patchJson(route('books.update', $book), $dataForUpdate);
 
-        $expectedJson = array_merge($dataForUpdate, ['id' => $book->id]);
+        $expectedJson = array_merge($dataForUpdate, ['id' => 1]);
         $response
             ->assertStatus(200)
             ->assertJson($expectedJson);
