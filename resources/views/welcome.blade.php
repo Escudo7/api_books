@@ -68,7 +68,7 @@
                             <td>Позволяет пропустить указанное количество единиц данных перед выводом результата запроса. По умолчанию равен 0</td>
                         </tr>
                     </table>
-                    <p>Пример запроса: <code>curl -i -X GET "http://127.0.0.1:8000/api/books?offset=1&limit=1"</code></p>
+                    <p>Пример запроса: <code>curl -i -X GET "https://api-book-collection.herokuapp.com/api/books?offset=1&limit=1"</code></p>
                     <p>Пример ответа:</p>
                     <pre class="pre-scrollable">
 [
@@ -131,7 +131,7 @@
                             <td>Год публикации. Не может быть больше текущего</td>
                         </tr>
                     </table>
-                    <p>Пример запроса: <code>curl -i -d "year_publication=1895&name=Машина времени&authors[]=7&genres[]=3" -X POST "http://127.0.0.1:8000/api/books/"
+                    <p>Пример запроса: <code>curl -i -d "year_publication=1895&name=Машина времени&authors[]=7&genres[]=3" -X POST "https://api-book-collection.herokuapp.com/api/books/"
                         </code></p>
                     <p>Пример ответа:</p>
                     <pre class="pre-scrollable">
@@ -189,7 +189,7 @@
                             <td>Новый год публикации. Не может быть больше текущего</td>
                         </tr>
                     </table>
-                    <p>Пример запроса: <code>curl -i -d "genres[]=3&genres[]=4" -X PATCH "http://127.0.0.1:8000/api/books/19</code></p>
+                    <p>Пример запроса: <code>curl -i -d "genres[]=3&genres[]=4" -X PATCH "https://api-book-collection.herokuapp.com/api/books/19</code></p>
                     <p>Пример ответа:</p>
                     <pre class="pre-scrollable">
 {
@@ -220,7 +220,7 @@
                 <p class="h4 hide-sibbling">Удаление книги</p>
                 <div class="hide pl-3">
                     <p class="h5">Маршрут: DELETE /api/books/{book_id}</p>
-                    <p>Пример запроса: <code>curl -i  -X DELETE "http://127.0.0.1:8000/api/books/31"</code></p>
+                    <p>Пример запроса: <code>curl -i  -X DELETE "https://api-book-collection.herokuapp.com/api/books/31"</code></p>
                 </div>
             </div>
         </div>
@@ -250,7 +250,7 @@
                             <td>Позволяет пропустить указанное количество единиц данных перед выводом результата запроса. По умолчанию равен 0</td>
                         </tr>
                     </table>
-                    <p>Пример запроса: <code>curl -i -X GET "http://127.0.0.1:8000/api/authors?offset=1&limit=2"</code></p>
+                    <p>Пример запроса: <code>curl -i -X GET "https://api-book-collection.herokuapp.com/api/authors?offset=1&limit=2"</code></p>
                     <p>Пример ответа:</p>
                     <pre class="pre-scrollable">
 [
@@ -297,7 +297,7 @@
                             <td>Фамилия автора</td>
                         </tr>
                     </table>
-                    <p>Пример запроса: <code>curl -i -d "first_name=Сергей&middle_name=Александрович&last_name=Есенин" -X POST "http://127.0.0.1:8000/api/authors"</code></p>
+                    <p>Пример запроса: <code>curl -i -d "first_name=Сергей&middle_name=Александрович&last_name=Есенин" -X POST "https://api-book-collection.herokuapp.com/api/authors"</code></p>
                     <p>Пример ответа:</p>
                     <pre class="pre-scrollable">
 {
@@ -350,7 +350,7 @@
                 <p class="h4 hide-sibbling">Удаление автора</p>
                 <div class="hide pl-3">
                     <p class="h5">Маршрут: DELETE /api/authors/{author_id}</p>
-                    <p>Пример запроса: <code>curl -i -X DELETE "http://127.0.0.1:8000/api/authors/12"</code></p>
+                    <p>Пример запроса: <code>curl -i -X DELETE "https://api-book-collection.herokuapp.com/api/authors/12"</code></p>
                 </div>
             </div>
         </div>
@@ -380,7 +380,7 @@
                             <td>Позволяет пропустить указанное количество единиц данных перед выводом результата запроса. По умолчанию равен 0</td>
                         </tr>
                     </table>
-                    <p>Пример запроса: <code>curl -i -X GET "http://127.0.0.1:8000/api/genres/?offset=1&limit=2"</code></p>
+                    <p>Пример запроса: <code>curl -i -X GET "https://api-book-collection.herokuapp.com/api/genres/?offset=1&limit=2"</code></p>
                     <p>Пример ответа:</p>
                     <pre class="pre-scrollable">
 [
@@ -413,7 +413,7 @@
                             <td>Название жанра</td>
                         </tr>
                     </table>
-                    <p>Пример запроса: <code>curl -i -d "name=Детектив" -X POST "http://127.0.0.1:8000/api/genres/"</code></p>
+                    <p>Пример запроса: <code>curl -i -d "name=Детектив" -X POST "https://api-book-collection.herokuapp.com/api/genres/"</code></p>
                     <p>Пример ответа:</p>
                     <pre class="pre-scrollable">
 {
@@ -440,7 +440,7 @@
                             <td>Новое название жанра</td>
                         </tr>
                     </table>
-                    <p>Пример запроса: <code>curl -i -d "name=Поэзия" -X PATCH "http://127.0.0.1:8000/api/genres/4"</code></p>
+                    <p>Пример запроса: <code>curl -i -d "name=Поэзия" -X PATCH "https://api-book-collection.herokuapp.com/api/genres/4"</code></p>
                     <p>Пример ответа:</p>
                     <pre class="pre-scrollable">
 {
@@ -452,7 +452,7 @@
                 <p class="h4 hide-sibbling">Удаление жанра</p>
                 <div class="hide pl-3">
                     <p class="h5">Маршрут: DELETE /api/ganres/{ganre_id}</p>
-                    <p>Пример запроса: <code>curl -i -X DELETE "http://127.0.0.1:8000/api/genres/1"</code></p>
+                    <p>Пример запроса: <code>curl -i -X DELETE "https://api-book-collection.herokuapp.com/api/genres/1"</code></p>
                 </div>
             </div>
         </div>
