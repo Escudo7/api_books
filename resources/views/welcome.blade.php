@@ -39,7 +39,7 @@
     <body>
     <div class="jumbotron">
         <h1 class="display-4">Books API</h1>
-        <p class="lead">Учебный проект по REST API для уплавнения коллекцией книг, авторов, жанров</p>
+        <p class="lead">Учебный проект по REST API для управнения коллекцией книг, авторов и жанров</p>
         <hr class="my-4">
         <p class="font-weight-bold h3">Документация по предоставляемым методам API:</p>
         <div class="my-3">
