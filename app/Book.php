@@ -9,6 +9,8 @@ class Book extends Model
 {
     use SoftDeletes;
 
+    protected $fillable = ['name', 'year_publication'];
+
     public function authors() {
         return $this->belongsToMany('\App\Author');
     }

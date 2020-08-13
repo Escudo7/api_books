@@ -15,9 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::apiResource('/authors', 'API\AuthorController')
-    ->except('show')
-    ->middleware(\App\Http\Middleware\JsonResponse::class);
+    ->except('show');
 
 Route::apiResource('/genres', 'API\GenreController')
-    ->except('show')
-    ->middleware(\App\Http\Middleware\JsonResponse::class);
+    ->except('show');
+
+Route::apiResource('/books', 'API\BookController')
+    ->except('show');
